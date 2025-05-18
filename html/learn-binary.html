@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Binary Numbers Learning</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/learn-binary.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Oxanium:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="/images/B.png" alt="BB Logo">
+            </div>
+            <div class="brand-name"><a>Binary Brains</a></div>
+        </div>
+    
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="learn-binary.html" >Learn Binary</a>
+            <a href="binary-codes.html" class="nav-link mobile-nav-link">Binary in Codes</a>
+            <a href="aboutus.html">About Us</a>
+        </div>
+    
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="../index.html">Home</a>
+            <a href="learn-binary.html">Learn Binary</a>
+            <a href="binary-codes.html" class="nav-link mobile-nav-link">Binary in Codes</a>
+            <a href="aboutus.html" >About Us</a>
+        </div>
+    </nav>
+    <div class="container">
+        <section id="hero" class="visible">
+            <h1>Learning Binary Numbers</h1>
+            <p style="text-align: center; font-size: clamp(1rem, 3vw, 1.3rem); max-width: 800px; margin: 0 auto; padding: 0 15px;">
+                Explore the fascinating world of binary numbers, logic gates, and digital circuits through interactive demonstrations and tools.
+            </p>
+        </section>
+
+        <section id="binary-explanation">
+            <div class="binary-explanation">
+                <h2>Understanding Binary Numbers</h2>
+                <p>Binary is a base-2 number system that uses only two digits: 0 and 1. Each digit in a binary number is called a "bit". In computing, binary numbers are fundamental as they represent the on (1) and off (0) states of transistors in computer chips.</p>
+                
+                <h3>Binary Place Values</h3>
+                <p>Just like decimal numbers have place values (ones, tens, hundreds, etc.), binary numbers have place values that are powers of two:</p>
+                
+                <div class="binary-table">
+                    <div class="bit-column">
+                        <div class="bit-header">Bit 5</div>
+                        <div class="bit-value" data-value="32">0</div>
+                    </div>
+                    <div class="bit-column">
+                        <div class="bit-header">Bit 4</div>
+                        <div class="bit-value" data-value="16">0</div>
+                    </div>
+                    <div class="bit-column">
+                        <div class="bit-header">Bit 3</div>
+                        <div class="bit-value" data-value="8">0</div>
+                    </div>
+                    <div class="bit-column">
+                        <div class="bit-header">Bit 2</div>
+                        <div class="bit-value" data-value="4">0</div>
+                    </div>
+                    <div class="bit-column">
+                        <div class="bit-header">Bit 1</div>
+                        <div class="bit-value" data-value="2">0</div>
+                    </div>
+                    <div class="bit-column">
+                        <div class="bit-header">Bit 0</div>
+                        <div class="bit-value" data-value="1">0</div>
+                    </div>
+                </div>
+                
+                <div class="decimal-value">
+                    Decimal Value: <span id="decimal-result">0</span>
+                </div>
+                
+                <p>Click on the binary digits above to toggle between 0 and 1. Watch how the decimal value changes in real-time!</p>
+                
+                <h3>How Binary Works</h3>
+                <p>To convert binary to decimal, multiply each bit by its place value (power of two) and add up the results. For example:</p>
+                <p><strong>1011</strong> in binary = (1×8) + (0×4) + (1×2) + (1×1) = <strong>11</strong> in decimal</p>
+            </div>
+        </section>
+
+        <section id="logic-gates">
+            <h2>Logic Gates in Digital Circuits</h2>
+            <p>Logic gates are the building blocks of digital circuits. They perform logical operations on binary inputs and produce a single binary output. These gates are implemented using transistors and form the basis of all digital electronics.</p>
+            
+            <div class="gates-container">
+                <div class="gate">
+                    <h3 class="gate-title">AND Gate</h3>
+                    <p>Outputs 1 only if all inputs are 1. Think of it like a strict requirement where all conditions must be met.</p>
+                    <div class="gate-symbol">AND</div>
+                    <table class="truth-table">
+                        <tr>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>Output</th>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="gate">
+                    <h3 class="gate-title">OR Gate</h3>
+                    <p>Outputs 1 if any input is 1. This is like an inclusive option where any condition being true is enough.</p>
+                    <div class="gate-symbol">OR</div>
+                    <table class="truth-table">
+                        <tr>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>Output</th>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="gate">
+                    <h3 class="gate-title">NOT Gate</h3>
+                    <p>Outputs the opposite of the input (inverter). This is the simplest gate with just one input and output.</p>
+                    <div class="gate-symbol">NOT</div>
+                    <table class="truth-table">
+                        <tr>
+                            <th>Input</th>
+                            <th>Output</th>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="bulb-logic">
+            <h2>Interactive Gate Demonstrations</h2>
+            <p>These interactive demonstrations show how different logic gates control physical devices like light bulbs. Toggle the switches to see the logic gates in action!</p>
+            
+            <div class="bulb-section">
+                <div class="bulb-demo">
+                    <h3 class="demo-title">AND Gate Demonstration</h3>
+                    <div class="bulb-container">
+                        <div class="bulb" id="and-bulb"></div>
+                        <div class="bulb-base"></div>
+                    </div>
+                    
+                    <div class="switch-container">
+                        <div class="switch-label">
+                            <label>Switch A</label>
+                            <label class="switch">
+                                <input type="checkbox" id="and-switchA">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="switch-label">
+                            <label>Switch B</label>
+                            <label class="switch">
+                                <input type="checkbox" id="and-switchB">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <p>The bulb will only light up when <strong>both</strong> switches are turned on, demonstrating AND gate logic. This represents scenarios where multiple conditions must be true simultaneously.</p>
+                </div>
+                
+                <div class="bulb-demo">
+                    <h3 class="demo-title">OR Gate Demonstration</h3>
+                    <div class="bulb-container">
+                        <div class="bulb" id="or-bulb"></div>
+                        <div class="bulb-base"></div>
+                    </div>
+                    
+                    <div class="switch-container">
+                        <div class="switch-label">
+                            <label>Switch A</label>
+                            <label class="switch">
+                                <input type="checkbox" id="or-switchA">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="switch-label">
+                            <label>Switch B</label>
+                            <label class="switch">
+                                <input type="checkbox" id="or-switchB">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <p>The bulb will light up when <strong>either</strong> switch is turned on, demonstrating OR gate logic. This represents scenarios where any one condition being true is sufficient.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="converter">
+            <div class="converter-container">
+                <h2>Binary-Decimal Converter</h2>
+                <p>Use this interactive converter to translate between binary and decimal numbers (up to 6-bit numbers, 0-63). The converter provides instant results as you type.</p>
+                
+                <div class="converter">
+                    <div class="input-group">
+                        <label for="conversion-type">Conversion Type:</label>
+                        <select id="conversion-type">
+                            <option value="binary-to-decimal">Binary to Decimal</option>
+                            <option value="decimal-to-binary">Decimal to Binary</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="input-value" id="input-label">Binary Number (6 bits max):</label>
+                        <input type="text" id="input-value" placeholder="e.g., 101010" maxlength="6">
+                    </div>
+                    
+                    <button id="convert-btn">Convert Now</button>
+                    
+                    <div class="result" id="result">
+                        Result: <span id="result-value"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div><br><br><hr><br><br>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="/images/B.png">
+                    </div>
+                    <div class="footer-brand-name">Binary Brains</div>
+                </div>
+                <p class="footer-description">
+                    Our website explores the history, working principles , real-world applications, and highlights the tech duos who changed the world using binary logic. We aim to make binary concepts simple, interactive, and inspiring for all.
+                </p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../html/learn-binary.html">Learn Binary</a></li>
+                    <li><a href="../html/binary-codes.html">Binary in Codes</a></li>
+                    <li><a href="../html/aboutus.html">About Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#">Learning Binary</a></li>
+                    <li><a href="#">Understanding Binary Numbers</a></li>
+                    <li><a href="#">Logic Gates</a></li>
+                    <li><a href="#">Interactive Gate</a></li>
+                    <li><a href="#">Binary-Decimal Converter</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Bamboo Street, Bangalore</li>
+                    <li><i class="fas fa-phone"></i> +91 9876543210</li>
+                    <li><i class="fas fa-envelope"></i> info@vanika.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Binary Brains. All Rights Reserved.</p>
+        </div>
+        <button id="backToTop" class="back-to-top">
+            <span class="binary-animation">
+                <span class="binary-digit">1</span>
+                <span class="binary-digit">0</span>
+                <span class="binary-digit">1</span>
+                <span class="binary-digit">0</span>
+            </span>
+            <span class="arrow">↑</span>
+        </button>
+    </footer>
+
+    <script src="/js/learn-binary.js"></script>
+</body>
+</html>
